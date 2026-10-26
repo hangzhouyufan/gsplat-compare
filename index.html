@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="本地 3D Gaussian Splatting 双视窗对比，支持手动对齐后绑定视角。"><title>3DGS 对比查看器</title><link rel="stylesheet" href="/src/style.css"></head>
+<body><main><header><div class="brand"><span class="mark">◈</span><div><h1>3DGS 对比查看器</h1><p>两个空间，同一视角。</p></div></div><div class="toolbar"><span class="fov">水平 FOV <b>85°</b></span><button id="bind" class="primary" disabled>绑定当前视角</button><button id="reset">重置双侧</button><button id="demo">体验示例</button><button id="fullscreen" title="全屏查看">全屏</button></div></header>
+<section class="guide"><span id="link-status"><i></i> 独立视角</span><p id="instruction">分别载入模型 → 独立调整两边视角 → 绑定当前视角，即可同步浏览</p><label>导航 <select id="navigation"><option value="look">漫游</option><option value="orbit">环绕</option></select></label><label>速度 <input id="speed" type="range" min="0.1" max="3" step="0.1" value="1" aria-label="移动速度"></label><label>背景 <select id="background"><option value="#10141b">深色</option><option value="#eeeeee">浅色</option><option value="#000000">纯黑</option></select></label></section>
+<section class="viewers" aria-label="左右 3DGS 对比"></section>
+<footer><span>漫游：左键转头 · 右键平移 · 滚轮前后移动 · WASD 移动 · Q/E 升降 · Shift 加速</span><span>文件仅在本地浏览器处理 <span class="privacy">●</span></span></footer><div id="notice" role="status" aria-live="polite"></div>
+</main><script type="module" src="/src/main.js"></script></body></html>
